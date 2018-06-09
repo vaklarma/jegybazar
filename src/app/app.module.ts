@@ -22,6 +22,8 @@ import {TicketListComponent} from './ticket/ticket-list/ticket-list.component';
 import {TicketComponent} from './ticket/ticket.component';
 
 import {AppRoutingModule} from './app-routing.module';
+import {EventService} from './shared/event.service';
+
 
 
 @NgModule({
@@ -42,7 +44,7 @@ import {AppRoutingModule} from './app-routing.module';
     AppRoutingModule
 
   ],
-  providers: [],
+  providers: [EventService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
