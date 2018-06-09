@@ -1,4 +1,3 @@
-
 <!-- keresés, létrehozás -->
 
 <div class="row  justify-content-around px-5 ">
@@ -23,17 +22,24 @@
 
 
 <div class="card-deck pt-5">
-  <app-eventcard class="col col-md-6 col-lg-4"></app-eventcard>
-  <app-eventcard class="col col-md-6 col-lg-4"></app-eventcard>
-  <app-eventcard class="col col-md-6 col-lg-4"></app-eventcard>
-</div>
-<div class="card-deck pt-5">
-  <app-eventcard class="col col-md-6 col-lg-4"></app-eventcard>
-  <app-eventcard class="col col-md-6 col-lg-4"></app-eventcard>
-  <app-eventcard class="col col-md-6 col-lg-4"></app-eventcard>
-</div>
-<div class="card-deck pt-5">
-  <app-eventcard class="col col-md-6 col-lg-4"></app-eventcard>
-  <app-eventcard class="col col-md-6 col-lg-4"></app-eventcard>
-  <app-eventcard class="col col-md-6 col-lg-4"></app-eventcard>
+
+  <app-eventcard class="col col-md-6 col-lg-4"
+                 *ngFor="let ev of events"
+                 [esemeny]="ev">
+
+  </app-eventcard>
+
+
+  <!--<app-eventcard class="col col-md-6 col-lg-4"></app-eventcard>-->
+  <!--<app-eventcard class="col col-md-6 col-lg-4"></app-eventcard>-->
+  <!--</div>-->
+  <!--<div class="card-deck pt-5">-->
+  <!--<app-eventcard class="col col-md-6 col-lg-4"></app-eventcard>-->
+  <!--<app-eventcard class="col col-md-6 col-lg-4"></app-eventcard>-->
+  <!--<app-eventcard class="col col-md-6 col-lg-4"></app-eventcard>-->
+  <!--</div>-->
+  <!--<div class="card-deck pt-5">-->
+  <!--<app-eventcard class="col col-md-6 col-lg-4"></app-eventcard>-->
+  <!--<app-eventcard class="col col-md-6 col-lg-4"></app-eventcard>-->
+  <!--<app-eventcard class="col col-md-6 col-lg-4"></app-eventcard>-->
 </div>
