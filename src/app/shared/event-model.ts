@@ -3,7 +3,7 @@ export class EventModel {
   name: string;
   date: string; // elvileg meg lehet oldalni, hogy dátum formátum legyen
   pictureURL: string;
-  descripton: string;
+  description: string;
 
 
   constructor(param?: EventModel) {

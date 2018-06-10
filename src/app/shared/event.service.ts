@@ -17,7 +17,7 @@ export class EventService {
         'name': 'Sziget Fesztivál',
         'date': '2017-08-03',
         'pictureURL': 'assets/sziget.png',
-        'description': 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.'
+        'description': 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
       },
       {
         'id': 2,
