@@ -7,7 +7,7 @@ import {EventModel} from '../../shared/event-model';
   styleUrls: ['./eventcard.component.css']
 })
 export class EventcardComponent implements OnInit {
-@Input() esemeny: EventModel;
+ @Input() esemeny: EventModel;
   constructor() { }
 
   ngOnInit() {
