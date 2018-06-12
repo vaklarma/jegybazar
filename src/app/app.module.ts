@@ -24,7 +24,7 @@ import {TicketComponent} from './ticket/ticket.component';
 import {AppRoutingModule} from './app-routing.module';
 import {EventService} from './shared/event.service';
 import {UserService} from './shared/user.service';
-
+import { AlertModule } from 'ngx-bootstrap/alert';
 
 @NgModule({
   declarations: [
@@ -41,7 +41,8 @@ import {UserService} from './shared/user.service';
   imports: [
     BrowserModule,
     CollapseModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    AlertModule.forRoot()
 
   ],
   providers: [EventService, UserService],
