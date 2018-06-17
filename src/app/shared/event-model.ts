@@ -1,5 +1,5 @@
 export class EventModel {
-  id: number;
+  id?: number;
   name: string;
   date: string; // elvileg meg lehet oldalni, hogy dátum formátum legyen
   pictureURL: string;
@@ -15,7 +15,6 @@ export class EventModel {
   static get emptyEvent() {
     console.log('belépett az üres eventbe');
     return {
-      id: 0,
       name: '',
       date: '',
       pictureURL: '',

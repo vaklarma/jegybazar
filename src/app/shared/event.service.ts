@@ -85,7 +85,29 @@ export class EventService {
 
   getEventById(id: number) {
     const ev = this._events.filter(x => x.id === id);
-    console.log('getEventbyId: ', id);
+    console.log(' A kért getEventbyId: ', id);
     return ev.length > 0 ? ev[0] : new EventModel(EventModel.emptyEvent);
+  }
+
+  update(ev: EventModel) {
+
+  }
+
+  create(param: EventModel) {
+    this._events = [
+      ...this._events,
+      {
+        id: this._getmaxId() + 1,
+        ...param
+      }
+
+
+  ];
+    console.log(this._events);
+
+  }
+
+  private _getmaxId() {
+    return this._events.reduce((x, y) => x.id > y.id ? x : y).id;
   }
 }
