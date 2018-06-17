@@ -12,4 +12,15 @@ export class EventModel {
     }
   }
 
+  static get emptyEvent() {
+    console.log('belépett az üres eventbe');
+    return {
+      id: 0,
+      name: '',
+      date: '',
+      pictureURL: '',
+      description: '',
+    };
+  }
+
 }

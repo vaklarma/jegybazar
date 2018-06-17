@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {TicketlistModel} from './ticketlist-model';
+
+import {TicketService} from '../../shared/ticket.service';
+import {TicketModel} from '../../shared/ticket-model';
+import {UserService} from '../../shared/user.service';
 
 @Component({
   selector: 'app-ticket-list',
@@ -8,31 +11,19 @@ import {TicketlistModel} from './ticketlist-model';
 })
 export class TicketListComponent implements OnInit {
 
-//   ticketlistData: TicketlistModel[];
-// oneticket:TicketlistModel;
-  constructor() {
-    //
-    // this.ticketlistData = [
-    //   {
-    //     eventid: 1,
-    //     eventName: 'első esemény',
-    //     eventTime: '2012.01.01',
-    //     author: 'első előadó',
-    //     quantity: 10,
-    //   },
-    //   {
-    //     eventid: 2,
-    //     eventName: 'második esemény',
-    //     eventTime: '2024.24.24',
-    //     author: 'második előadó',
-    //     quantity: 20,
-    //   },
-    // ];
+  public tickets: TicketModel[];
+
+
+  constructor(private _ticketService: TicketService,
+              private _userService: UserService) {
+
   }
 
 
-
   ngOnInit() {
+
+    this.tickets = this._ticketService.getAllTickets();
+    console.log(this.tickets);
   }
 
 }
