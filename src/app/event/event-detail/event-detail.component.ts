@@ -39,9 +39,9 @@ export class EventDetailComponent implements OnInit {
       console.log('update ág');
       this._eventService.update(this.event);
     } else {
-
+      this._eventService.create(this.event);
     }
-   this._eventService.create(this.event);
+
   this._router.navigate(['/event/list']);
   }
 }

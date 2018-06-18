@@ -89,8 +89,16 @@ export class EventService {
     return ev.length > 0 ? ev[0] : new EventModel(EventModel.emptyEvent);
   }
 
-  update(ev: EventModel) {
-
+  update(param: EventModel) {
+    console.log('update az eventService ben');
+    this._events = this._events.map(ev => {
+      if (ev.id === param.id) {
+        return {...param};
+      } else {
+        return ev;
+      }
+      // return ev.id === param.id ? {...param} : ev;
+    });
   }
 
   create(param: EventModel) {
@@ -102,7 +110,7 @@ export class EventService {
       }
 
 
-  ];
+    ];
     console.log(this._events);
 
   }
