@@ -2,43 +2,39 @@ export class UserModel {
   id: number;
   name: string;
   email: string;
+  address: string;
   dateOfBirth: string;
   gender: string;
-  address: string;
+  profilePictureUrl: string;
 
   constructor(param?: UserModel) {
     if (param) {
       Object.assign(this, param);
     }
-
-
   }
 
+  // UserModel.exampleUser
   static get exampleUser(): UserModel {
-
     return {
       id: 0,
-      name: 'Makkmarci Béla',
-      email: 'makkmarcibela@valami.hu',
-      address: 'hallihó utca 25',
+      name: 'Legyek Réka Matlida',
+      email: 'legyekrekamatilda@valami.com',
+      address: 'Futrinka utca',
       dateOfBirth: '2001.01.01',
-      gender: 'male',
-
-
+      gender: 'female',
+      profilePictureUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4nBubms8tp5EDXG6LBhVyy4AES2WCqceh674hyF6rNwjYoJ4ddQ'
     };
-
-
   }
 
   static get emptyUser(): UserModel {
-    console.log('belépett az üres userbe');
     return {
       id: 0,
-      name: 'EmptyUser',
+      name: '',
       email: '',
       address: '',
       dateOfBirth: '',
-      gender: ''
+      gender: '',
+      profilePictureUrl: ''
     };
   }
 }
