@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {UserService} from '../../shared/user.service';
+import { UserService } from '../../shared/user.service';
 
 @Component({
   selector: 'app-registration',
@@ -13,8 +13,8 @@ export class RegistrationComponent implements OnInit {
   ngOnInit() {
   }
 
-  registration () {
-
- this._userService.register();
+  register() {
+    this._userService.register();
   }
+
 }
