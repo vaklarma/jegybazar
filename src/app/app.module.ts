@@ -29,6 +29,7 @@ import {TicketService} from './shared/ticket.service';
 import {LoggedInGuard} from './shared/logged-in.guard';
 import {FormsModule} from '@angular/forms';
 
+import { HttpClientModule }    from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +38,7 @@ import {FormsModule} from '@angular/forms';
     EventcardComponent,
     EventComponent,
     FooterComponent,
+  
     ...AppRoutingModule.routableComponents
 
 
@@ -46,7 +48,8 @@ import {FormsModule} from '@angular/forms';
     FormsModule,
     CollapseModule.forRoot(),
     AppRoutingModule,
-    AlertModule.forRoot()
+    AlertModule.forRoot(),
+    HttpClientModule
 
   ],
   providers: [EventService, UserService, TicketService, LoggedInGuard],
