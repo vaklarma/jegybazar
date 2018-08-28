@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { EventModel } from './event-model';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
-import { Observable } from 'rxjs/observable';
+import { Observable } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
 
 @Injectable()
@@ -14,7 +14,10 @@ export class EventService {
   }
 
   getAllEvents(): Observable<EventModel[]> {
-return this._http.get(`${environment.firebase.baseUrl}/events.json`);
+//return this._http.get(`${environment.firebase.baseUrl}/events.json`);
+return this._http.get('https://jegybazar-c192a.firebaseio.com/events.json');
+
+
   }
 
   getEventById(id: number) {
